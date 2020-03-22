@@ -29,5 +29,7 @@ USER jenkins
 
 # Add useful plugin
 COPY plugins.txt /usr/share/jenkins/plugins.txt
-COPY kubectl /usr/local/bin/
 RUN xargs /usr/local/bin/install-plugins.sh < /usr/share/jenkins/plugins.txt
+
+# Add kubectl
+COPY kubectl /usr/local/bin/
