@@ -1,0 +1,12 @@
+git
+docker-build-step
+ssh-slaves
+email-ext
+mailer
+slack
+bitbucket
+htmlpublisher
+greenballs
+simple-theme-plugin
+kubernetes
+prometheus
