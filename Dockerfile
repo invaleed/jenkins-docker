@@ -25,11 +25,11 @@ RUN \
 RUN wget -qO- https://get.docker.com/ | sh
 RUN usermod -aG docker jenkins
 
-USER jenkins
-
 # Add useful plugin
 COPY plugins.txt /usr/share/jenkins/plugins.txt
 RUN xargs /usr/local/bin/install-plugins.sh < /usr/share/jenkins/plugins.txt
 
 # Add kubectl
 COPY kubectl /usr/local/bin/
+
+USER jenkins
